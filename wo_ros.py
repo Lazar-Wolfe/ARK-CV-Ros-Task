@@ -21,6 +21,8 @@ def read_pose():
     intrinsic_matrix = np.identity(3)
     intrinsic_matrix[0][0]=f
     intrinsic_matrix[1][1]=f
+    intrinsic_matrix[0][2]=256/2
+    intrinsic_matrix[1][2]=144/2
     for id in range(10):
         file = open(r"C:/Users/c28ga/Documents/ARK/CV-ROS Task/Pose/" + str(id) + "_2.txt", "rb")
         quaternion = []
